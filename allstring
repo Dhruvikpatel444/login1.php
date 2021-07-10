@@ -1,0 +1,11 @@
+<?php
+	echo strlen("hello world!"); // length of string
+
+	echo str_word_cout("hello world!"); // word count
+
+	echo strrev("hello world!"); // reverse string
+
+	echo strpos("hello world!","world"); //position of string
+
+	echo str_replace("world","Dolly","hello world!"); // replace string
+?>

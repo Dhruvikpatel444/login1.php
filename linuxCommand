@@ -1,0 +1,124 @@
+1) date - print current date and time
+			date'+%option'
+			%d - date
+			%m - month
+			%y - two digit year
+			%Y - four digit year
+			%u - weekday number
+			%H - Hours
+			%M - Minutes
+			%S - seconds
+
+2) ls command - list command - list files and folders
+				ls-l long listing format
+			[rw-][r--][r--]  1  promise  Domain U  44910  Oct 1 10:23  python.docx
+		-> first character - type of file
+		-> first group - group permission
+		-> second group - group permission 
+		-> third group - global permission 
+		-> 1 - link count
+		-> promise - UserName
+		-> Domain U - group name
+		-> 44910 - file size in bytes
+		-> Oct 1 10:23 - last modified date and time
+		-> python.docx - file anme
+
+				ls -a  - all files and directory
+				ls -1  - one column output
+				ls -S  - sort file by size
+				ls -t  - sort by last modified date and time
+				ls -r  - sort in reverse order
+
+3) who command - it gives the list of user who are currently login into the server.
+				who command gives the following information :-
+					(1)the Name of user
+					(2)terminal line number
+					(3)login time of the user into the system
+					(4)remote host name of the user 
+
+4) cal - display calender of current month and year
+		cal [year]  - display calender for whole year
+		cal [month] [year]  - display calender for particular month and year
+
+
+####################################################################################################
+									file manipulation command
+####################################################################################################
+5) cat command -
+		cat > filename  - create a new file [ctrl + d - save and quit the file]
+		cat filename  - display file content
+		cat >> filename  - append the content into the file
+
+6) cp command - copy file content
+		cp [source_filename] [destination_filename]
+
+		-i  - interactive copy
+
+7) mv command - move file
+		mv [source_location] [destination_location]
+
+8) rm command - remove file
+		rm filename
+
+		-i  - interactive delete
+
+9) wc command - word count command
+		wc filename  - display no of lines , words , characters
+
+		-l  - no of lines
+		-w  - no of words
+		-c  - no of characters
+
+10) tr command - translate command
+		cat test.txt | tr 'i' 'I'
+		cat test.txt | tr '[a-z]' '[A-Z]'
+		cat test.txt | tr '[a-z][A-Z]' '[A-Z][a-z]'
+		cat test.txt | tr -d 'D'
+		cat test.txt | tr -s ''
+
+		-d  - delete specified character
+		-s  - supress the specified character
+
+11) more and less command - display file pagewise
+		more filename
+		less filename
+
+12) head and tail command
+		-> head command - display no. of lines from starting of file
+						head -n 5 test
+		-> tail command - display no. of lines from end of lines
+						tail -n 5 test
+		-> display lines in between 3 to 7
+						cat no | head -n 7 | tail -n 5
+
+***************************************************************************
+						directory manipulation command
+***************************************************************************
+
+13) mkdir command
+		mkdir KSOS
+		mkdir T1 T2 T3
+		mkdir KSOS/test
+
+14) cd - change directory
+		cd foldername - change directory
+		cd .. - move to the parent folder
+		cd - move to the root directory
+
+15) pwd - present working directory
+
+16) rmdir - remove directory
+		rmdir directoryname
+		rm -R directoryname  - remove non empty directory
+
+***************************************************************************
+							compare two files
+***************************************************************************
+
+17) cmp command - 
+		cmp file1 file2
+		-> it compare two files and show the difference between two files in character and lines
+
+18) diff command -
+		diff file1 file2
+		-> it compare two files and also give suggestion how two file can be same 

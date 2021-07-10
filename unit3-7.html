@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>Email Validation</title>
+		<script type="text/javascript">
+			function validateform()
+			{
+				var email = document.myform.email.value;
+				//var pass = document.myform.pass.value;
+
+				regex = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+
+				if(!email.match(regex))
+				{
+					alert("Invalid Email !!!");
+				}
+				else
+				{
+					alert("All Things are Valid ");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<center>
+		<table border="3">
+			<form name="myform" onsubmit="validateform()">
+				<tr>
+					<td>Email : </td>
+					<td><input type="text" name="email"><br></td>
+				</tr>
+				<tr align="center">
+					<td colspan="2">
+						<input type="submit" value="register">
+					</td>
+				</tr>
+			</form>
+		</table>
+		</center>
+	</body>
+</html>
